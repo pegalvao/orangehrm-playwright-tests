@@ -26,5 +26,9 @@ describe('Login test', () => {
 
     })
   })
+  it('Login com campo vazio', () => {
+    cy.get('.oxd-button').click()
+    cy.get('.oxd-input-group .oxd-text').should('be.visible').and('contain.text', 'Required')
+  })
 
 })
