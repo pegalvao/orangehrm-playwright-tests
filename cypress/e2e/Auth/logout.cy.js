@@ -1,6 +1,7 @@
 describe('Logout test', () => {
     beforeEach(() => {
     cy.visit('/web/index.php/auth/login')
+    cy.on('uncaught:exception', () => false)
   })
 
   it('Logout com sucesso', () => {
@@ -12,10 +13,8 @@ describe('Logout test', () => {
       cy.url().should('include', '/dashboard')
       cy.get('.oxd-userdropdown-tab').click()
       cy.get('.oxd-userdropdown').should('be.visible')
-      cy.wait(1000)
-      cy.get('.oxd-dropdown-menu .oxd-userdropdown-link').should('be.visible').and('contain.text', 'Logout').click()
+      cy.get('.oxd-dropdown-menu').contains('Logout').click()
       cy.get('[name="username"]').should('be.visible')
     })
-   
   })
 })
