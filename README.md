@@ -11,9 +11,8 @@ Projeto de testes automatizados E2E com **Cypress** cobrindo o site [OrangeHRM](
 | Módulo | Status |
 |--------|--------|
 | Login  | ✅ Concluído |
-| Dashboard | 🔜 Em breve |
-| Funcionários | 🔜 Em breve |
-| Recrutamento | 🔜 Em breve |
+| Logout | ✅ Concluído |
+| Admin | 🔜 Em breve |
 
 ---
 
@@ -24,6 +23,9 @@ cypress/
 ├── e2e/
 │   └── Auth/
 │       └── login.cy.js       # Testes de autenticação
+        └── logout.cy.js      # Testes de encerrar sessão
+    └── Admin/
+        
 ├── fixtures/
 │   └── users.json            # Credenciais de teste
 └── support/
