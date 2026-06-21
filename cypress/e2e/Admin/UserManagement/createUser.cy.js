@@ -10,14 +10,32 @@ describe('Admin test', () => {
     })
     })
         
-//   it('Verificar elementos da interface', () => {  
-//      cy.url().should('include', '/admin/viewSystemUsers')
-//     })
-
-  it('Criar novo usuário', () => {
-    cy.get('.oxd')
-    //  cy.url().should('include', '/admin/viewSystemUsers')
+    it('Criar novo usuário', () => {
+        cy.get('.orangehrm-header-container .oxd-button').contains('Add').click()
     })
+
+    // it('Criar usuário com dados inválidos', () => {
+    
+    // })
+
+    // it('Editar usuário existente', () => {
+        
+    // })
+
+    // it('Deletar usuário', () => {
+            
+    // })
+
+    // it('Buscar usuário pelo username', () => {
+            
+    // })
+
+    // it('Buscar usuário por tole,status,nome', () => {
+            
+    // })
+
+
+
 
 
 })
