@@ -1,0 +1,14 @@
+{
+    "employee1":{
+        "name" : "Augusto Silva",
+        "username": "Augusto.silva",
+        "password": "Teste@123"
+    },
+
+      "employee2":{
+        "name" : "Mônica Carvalho",
+        "username": "Monica.carvalho",
+        "password": "mOnIcA@123"
+    }
+
+}

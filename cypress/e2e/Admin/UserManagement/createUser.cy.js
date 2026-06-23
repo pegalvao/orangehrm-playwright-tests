@@ -10,8 +10,13 @@ describe('Admin test', () => {
     })
     })
         
-    it('Criar novo usuário', () => {
+    it('Criar novo usuário com função de admin caso já tenha um Employee Name que já exista', () => {
         cy.get('.orangehrm-header-container .oxd-button').contains('Add').click()
+        cy.fixture('userManagement').then((userManagement) => {
+            cy.get('.oxd-input-group .oxd-input').eq(0).type(userManagement.employee1.username)
+            cy.get('.oxd-input-group .oxd-input').eq(1).type(userManagement.employee1.password)
+            cy.get('.oxd-input-group .oxd-input').eq(2).type(userManagement.employee1.password)
+        })
     })
 
     // it('Criar usuário com dados inválidos', () => {
