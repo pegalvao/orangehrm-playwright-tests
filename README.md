@@ -1,8 +1,9 @@
 # 🧪 Automação de Testes — OrangeHRM
 
-Projeto de testes automatizados E2E com **Cypress** cobrindo o site [OrangeHRM](https://opensource-demo.orangehrmlive.com). O objetivo é cobrir todos os módulos do sistema ao longo do tempo.
+Projeto de testes automatizados E2E com **Playwright** cobrindo o site [OrangeHRM](https://opensource-demo.orangehrmlive.com). O objetivo é cobrir todos os módulos do sistema ao longo do tempo.
 
 > 🚧 Projeto em andamento — novos testes sendo adicionados progressivamente.
+> Migrado de Cypress para Playwright.
 
 ---
 
@@ -19,18 +20,13 @@ Projeto de testes automatizados E2E com **Cypress** cobrindo o site [OrangeHRM](
 ## 🗂️ Estrutura do projeto
 
 ```
-cypress/
-├── e2e/
-│   └── Auth/
-│       └── login.cy.js       # Testes de autenticação
-        └── logout.cy.js      # Testes de encerrar sessão
-    └── Admin/
-        
-├── fixtures/
-│   └── users.json            # Credenciais de teste
-└── support/
-    └── e2e.js
-cypress.config.js
+tests/
+├── auth/
+│   ├── login.spec.js       # Testes de autenticação
+│   └── logout.spec.js      # Testes de encerrar sessão
+└── admin/
+
+playwright.config.js
 package.json
 ```
 
@@ -54,23 +50,34 @@ cd cypress-automatization-1
 **2. Instale as dependências**
 ```bash
 npm install
+npx playwright install
 ```
 
-**3. Abra o Cypress (modo visual)**
+**3. Rode os testes (modo headless)**
 ```bash
-npx cypress open
+npm test
 ```
 
-**4. Ou rode em modo headless**
+**4. Ou rode em modo visual (com navegador aberto)**
 ```bash
-npx cypress run
+npm run test:headed
+```
+
+**5. Ou use a interface interativa do Playwright**
+```bash
+npm run test:ui
+```
+
+**6. Veja o relatório da última execução**
+```bash
+npm run report
 ```
 
 ---
 
 ## 🧪 Testes de Login
 
-Localização: `cypress/e2e/Auth/login.cy.js`
+Localização: `tests/auth/login.spec.js`
 
 | Cenário | Resultado esperado |
 |---------|-------------------|
@@ -81,7 +88,7 @@ Localização: `cypress/e2e/Auth/login.cy.js`
 
 ## 🛠️ Tecnologias
 
-- [Cypress](https://www.cypress.io/) — automação E2E
+- [Playwright](https://playwright.dev/) — automação E2E
 - JavaScript
 - [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com) — aplicação alvo
 
