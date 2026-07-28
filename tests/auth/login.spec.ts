@@ -19,6 +19,6 @@ test.describe('Login', () => {
     await page.getByRole('textbox', { name: 'Password' }).fill(process.env.INVALID_PASSWORD!);
     await page.getByRole('button', { name: 'Login' }).click();
   
-    await expect(page.getByText('Invalid credentials')).toBeVisible();//test
+    await expect(page.getByText('Invalid credentials')).toBeVisible();
   });
 });
