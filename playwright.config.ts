@@ -10,7 +10,7 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    baseURL: 'https://opensource-demo.orangehrmlive.com',
+    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/',
 
     // Guarda trace apenas quando um teste falha e é re-executado
     trace: 'on-first-retry',
