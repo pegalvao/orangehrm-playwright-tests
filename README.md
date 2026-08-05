@@ -77,7 +77,7 @@ npm run report
 
 ## 🧪 Testes de Login
 
-Localização: `tests/auth/login.spec.js`
+Localização: `tests/auth/login.spec.ts`
 
 | Cenário | Resultado esperado |
 |---------|-------------------|
