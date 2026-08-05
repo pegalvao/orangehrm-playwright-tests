@@ -3,7 +3,6 @@ cypress/videos/
 cypress/screenshots/
 cypress/downloads/
 .DS_Store
-.env
 
 # Playwright
 /test-results/
@@ -11,3 +10,6 @@ cypress/downloads/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Variaveis de Ambiente e Segredos
+.env
