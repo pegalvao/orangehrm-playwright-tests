@@ -1,5 +1,3 @@
-// tests/setup/global.setup.ts
-
 import { test as setup, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
 import { ENV } from '../../config/env';
