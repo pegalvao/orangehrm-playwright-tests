@@ -44,7 +44,7 @@ package.json
 **1. Clone o repositório**
 ```bash
 git clone https://github.com/pegalvao/cypress-automatization-1.git
-cd cypress-automatization-1
+cd orangehrm-playwright-tests
 ```
 
 **2. Instale as dependências**
