@@ -22,8 +22,8 @@ Projeto de testes automatizados E2E com **Playwright** cobrindo o site [OrangeHR
 ```
 tests/
 ├── auth/
-│   ├── login.spec.js       # Testes de autenticação
-│   └── logout.spec.js      # Testes de encerrar sessão
+│   ├── login.spec.ts       # Testes de autenticação
+│   └── logout.spec.ts      # Testes de encerrar sessão
 └── admin/
 
 playwright.config.js
@@ -43,7 +43,7 @@ package.json
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/pegalvao/cypress-automatization-1.git
+git clone https://github.com/pegalvao/orangeherm-playwright-tests.git
 cd orangehrm-playwright-tests
 ```
 
