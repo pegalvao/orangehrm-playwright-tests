@@ -84,6 +84,14 @@ Localização: `tests/auth/login.spec.ts`
 | Login com credenciais válidas | Redireciona para o dashboard |
 | Login com credenciais inválidas | Exibe mensagem "Invalid credentials" |
 
+
+## Testes da página de Admin 
+
+Localização: `tests/admin/admin.spec.ts`
+
+| Cenário | Resultado esperado |
+|---------|-------------------|
+
 ---
 
 ## 🛠️ Tecnologias
