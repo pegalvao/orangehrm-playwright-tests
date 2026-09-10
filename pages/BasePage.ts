@@ -40,7 +40,52 @@ export class BasePage{
         await this.page.waitForURL('**/pim/viewEmployeeList');
     }
 
+    async LeavePage(){
+        await this.LeaveMenuButton.click();
+        await this.page.waitForURL('**/leave/viewLeaveList');
+    }
+
+    async TimePage(){
+        await this.TimeMenuButton.click();
+        await this.page.waitForURL('**/time/viewEmployeeTimesheet');
+    }
    
+    async RecruitmentPage(){
+        await this.RecruitmentMenuButton.click();
+        await this.page.waitForURL('**/recruitment/viewCandidates');
+    }
 
+    async MyInfoPage(){
+        await this.MyInfoMenuButton.click();
+        await this.page.waitForURL('**/viewPersonalDetails/empNumber/7');
+    }
+    async PerformancePage(){
+        await this.PerformanceMenuButton.click();
+        await this.page.waitForURL('**/performance/searchEvaluatePerformanceReview');
+    }
+
+    async DashboardPage(){
+        await this.DashboardMenuButton.click();
+        await this.page.waitForURL('**/dashboard/index');
+    }
+
+    async DirectoryPage(){
+        await this.DirectoryMenuButton.click();
+        await this.page.waitForURL('**/directory/viewDirectory');
+    }
+
+    async MaintenancePage(){
+        await this.MaintenanceMenuButton.click();
+        await this.page.waitForURL('**/maintenance/purgeEmployee');
+    }
+
+    async ClaimPage(){
+        await this.ClaimMenuButton.click();
+        await this.page.waitForURL('**/claim/viewAssignClaim');
+    }
+
+    async BuzzPage(){
+        await this.BuzzMenuButton.click();
+        await this.page.waitForURL('**/buzz/viewBuzz');
+    }
 }
-

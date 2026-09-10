@@ -14,7 +14,7 @@ test.describe('Autenticação - Login', () => {
 
   });
 
-  test('Deve realizar login com credenciais válidas com sucesso', async ({ page }) => {
+  test('Deve realizar login com credenciais válidas com sucesso', async () => {
     await loginPage.login(ENV.VALID_USERNAME, ENV.VALID_PASSWORD);
 
     await dashboardPage.LoadingDashboardPage();
