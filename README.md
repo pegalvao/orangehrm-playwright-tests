@@ -87,7 +87,7 @@ Localização: `tests/auth/login.spec.ts`
 
 ## Testes da página de Admin 
 
-Localização: `tests/admin/adminm  .spec.ts`
+Localização: `tests/admin/admin.spec.ts`
 
 | Cenário | Resultado esperado |
 |---------|-------------------|
