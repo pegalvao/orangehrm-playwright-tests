@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 
-export class BasePage{
+export class NavegationMenu{
     readonly page : Page
     readonly AdminMenuButton : Locator
     readonly PimMenuButton : Locator
@@ -88,4 +88,6 @@ export class BasePage{
         await this.BuzzMenuButton.click();
         await this.page.waitForURL('**/buzz/viewBuzz');
     }
+
+    dashBoardPageURL = '/web/index.php/dashboard/index';
 }
