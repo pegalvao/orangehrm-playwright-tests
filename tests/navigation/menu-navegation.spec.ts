@@ -1,13 +1,12 @@
 import { test, expect } from '@playwright/test';
 import { NavegationMenu} from '../../pages/NavegationMenu';
-
 test.describe('Smoke Test - Navegação do Menu Principal', () => {
   let navegationMenu: NavegationMenu;
 
   test.beforeEach(async ({ page }) => {
     navegationMenu = new NavegationMenu(page);
     
-    await page.goto(navegationMenu.dashBoardPageURL);
+    await page.goto();
   });
 
   test('Deve navegar pelas páginas principais usando o menu lateral', async ({ page }) => {

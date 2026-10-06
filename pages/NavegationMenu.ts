@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-
+import { URL_PATTERNS } from '../config/route.ts';
 export class NavegationMenu{
     readonly page : Page
     readonly AdminMenuButton : Locator
@@ -32,62 +32,60 @@ export class NavegationMenu{
     //Acessar a página de Admin
     async AcessAdminPage(){
         await this.AdminMenuButton.click();
-        await this.page.waitForURL('**/admin/viewSystemUsers');
+        await this.page.waitForURL(URL_PATTERNS.ADMIN);
     }
 
     async AcessPimPage(){
         await this.PimMenuButton.click();
-        await this.page.waitForURL('**/pim/viewEmployeeList');
+        await this.page.waitForURL(URL_PATTERNS.PIM);
     }
 
     async LeavePage(){
         await this.LeaveMenuButton.click();
-        await this.page.waitForURL('**/leave/viewLeaveList');
+        await this.page.waitForURL(URL_PATTERNS.LEAVE);
     }
 
     async TimePage(){
         await this.TimeMenuButton.click();
-        await this.page.waitForURL('**/time/viewEmployeeTimesheet');
+        await this.page.waitForURL(URL_PATTERNS.TIME);
     }
    
     async RecruitmentPage(){
         await this.RecruitmentMenuButton.click();
-        await this.page.waitForURL('**/recruitment/viewCandidates');
+        await this.page.waitForURL(URL_PATTERNS.RECRUITMENT);
     }
 
     async MyInfoPage(){
         await this.MyInfoMenuButton.click();
-        await this.page.waitForURL('**/viewPersonalDetails/empNumber/7');
+        await this.page.waitForURL(URL_PATTERNS.MY_INFO);
     }
     async PerformancePage(){
         await this.PerformanceMenuButton.click();
-        await this.page.waitForURL('**/performance/searchEvaluatePerformanceReview');
+        await this.page.waitForURL(URL_PATTERNS.PERFOMANCE);
     }
 
     async DashboardPage(){
         await this.DashboardMenuButton.click();
-        await this.page.waitForURL('**/dashboard/index');
+        await this.page.waitForURL(URL_PATTERNS.DASHBOARD);
     }
 
     async DirectoryPage(){
         await this.DirectoryMenuButton.click();
-        await this.page.waitForURL('**/directory/viewDirectory');
+        await this.page.waitForURL(URL_PATTERNS.DIRECTORY);
     }
 
     async MaintenancePage(){
         await this.MaintenanceMenuButton.click();
-        await this.page.waitForURL('**/maintenance/purgeEmployee');
+        await this.page.waitForURL(URL_PATTERNS.MAINTENANCE);
     }
 
     async ClaimPage(){
         await this.ClaimMenuButton.click();
-        await this.page.waitForURL('**/claim/viewAssignClaim');
+        await this.page.waitForURL(URL_PATTERNS.CLAIM);
     }
 
     async BuzzPage(){
         await this.BuzzMenuButton.click();
-        await this.page.waitForURL('**/buzz/viewBuzz');
+        await this.page.waitForURL(URL_PATTERNS.BUZZ);
     }
-
-    dashBoardPageURL = '/web/index.php/dashboard/index';
 }
