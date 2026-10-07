@@ -61,7 +61,7 @@ export class NavegationMenu{
     }
     async PerformancePage(){
         await this.PerformanceMenuButton.click();
-        await this.page.waitForURL(URL_PATTERNS.PERFOMANCE);
+        await this.page.waitForURL(URL_PATTERNS.PERFORMANCE);
     }
 
     async DashboardPage(){
