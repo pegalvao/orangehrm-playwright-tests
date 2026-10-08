@@ -105,7 +105,3 @@ npx playwright show-report
 QA Junior apaixonado por qualidade de software, focado em aprender a base sólida da automação de testes.
 
 [LinkedIn](https://www.linkedin.com/in/pedro-evaristo-71a727216/) · [GitHub](https://github.com/pegalvao)
-
-```
-
-```
