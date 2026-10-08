@@ -57,7 +57,7 @@ O projeto foi estruturado utilizando o padrão **POM**, separando a lógica de i
 **1. Clone o repositório e acesse a pasta**
 
 ```bash
-git clone [https://github.com/pegalvao/orangehrm-playwright-tests.git](https://github.com/pegalvao/orangehrm-playwright-tests.git)
+git clone (https://github.com/pegalvao/orangehrm-playwright-tests.git)
 cd orangehrm-playwright-tests
 
 ```
@@ -74,11 +74,11 @@ npx playwright install
 Crie um arquivo `.env` na raiz do projeto contendo:
 
 ```env
-BASE_URL=[https://opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com)
-VALID_USERNAME=Admin
-VALID_PASSWORD=admin123
-INVALID_USERNAME=TestQA
-INVALID_PASSWORD=senhaerrada
+BASE_URL="https://opensource-demo.orangehrmlive.com"
+VALID_USERNAME="Admin"
+VALID_PASSWORD="admin123"
+INVALID_USERNAME="TestQA"
+INVALID_PASSWORD="senhaerrada"
 
 ```
 
