@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 import { URL_PATTERNS } from '../config/route.ts';
-export class NavegationMenu{
+export class NavigationMenu{
     readonly page : Page
     readonly AdminMenuButton : Locator
     readonly PimMenuButton : Locator

@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { NavegationMenu} from '../../pages/NavegationMenu';
+import { NavigationMenu} from '../../pages/NavegationMenu';
 import { URL_PATTERNS } from '../../config/route.ts';
 test.describe('Smoke Test - Navegação do Menu Principal', () => {
-  let navegationMenu: NavegationMenu;
+  let navegationMenu: NavigationMenu;
 
   test.beforeEach(async ({ page }) => {
-    navegationMenu = new NavegationMenu(page);
+    navegationMenu = new NavigationMenu(page);
     
-    await page.goto(URL_PATTERNS.DASHBOARD);
+    await navegationMenu.DashboardPage();
+
   });
 
   test('Deve navegar pelas páginas principais usando o menu lateral', async ({ page }) => {
@@ -38,5 +39,5 @@ test.describe('Smoke Test - Navegação do Menu Principal', () => {
     // 7. Retorna ao Dashboard
     await navegationMenu.DashboardPage();
     await expect(page).toHaveURL(URL_PATTERNS.DASHBOARD);
-  });
+  }); 
 });
