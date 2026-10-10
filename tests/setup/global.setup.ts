@@ -14,5 +14,5 @@ setup('Autenticar e salvar estado da sessão', async ({ page }) => {
   await dashboardPage.LoadingDashboardPage();
   await expect(dashboardPage.dashboardButton).toBeVisible();
 
-  await page.context().storageState({ path: authFile });
+  // await page.context().storageState({ path: authFile });
 });
