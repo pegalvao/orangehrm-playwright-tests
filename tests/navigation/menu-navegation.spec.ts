@@ -1,58 +1,58 @@
 import { test, expect } from '@playwright/test';
-import { NavigationMenu} from '../../pages/NavegationMenu';
+import { NavigationMenu} from '../../pages/NavigationMenu';
 import { URL_PATTERNS } from '../../config/route.ts';
 test.describe('Smoke Test - Navegação do Menu Principal', () => {
-  let navegationMenu: NavigationMenu;
+  let navigationMenu: NavigationMenu;
 
   test.beforeEach(async ({ page }) => {
-    navegationMenu = new NavigationMenu(page);
+    navigationMenu = new NavigationMenu(page);
     
-    await navegationMenu.AcessDashboard();
+    await navigationMenu.AcessDashboard();
   });
 
   test('Deve navegar pelas páginas principais usando o menu lateral', async ({ page }) => {
     // 1. Admin
-    await navegationMenu.AcessAdminPage();
+    await navigationMenu.AcessAdminPage();
     await expect(page).toHaveURL(URL_PATTERNS.ADMIN);
 
     // 2. PIM
-    await navegationMenu.AcessPimPage();
+    await navigationMenu.AcessPimPage();
     await expect(page).toHaveURL(URL_PATTERNS.PIM);
 
     // 3. Leave
-    await navegationMenu.LeavePage();
+    await navigationMenu.LeavePage();
     await expect(page).toHaveURL(URL_PATTERNS.LEAVE);
 
     // 4. Time
-    await navegationMenu.TimePage();
+    await navigationMenu.TimePage();
     await expect(page).toHaveURL(URL_PATTERNS.TIME);
 
     // 5. Recruitment
-    await navegationMenu.RecruitmentPage();
+    await navigationMenu.RecruitmentPage();
     await expect(page).toHaveURL(URL_PATTERNS.RECRUITMENT);
 
     // 6. My Info
-    await navegationMenu.MyInfoPage();
+    await navigationMenu.MyInfoPage();
     await expect(page).toHaveURL(URL_PATTERNS.MY_INFO);
 
     // 7. Performance
-    await navegationMenu.PerformancePage();
+    await navigationMenu.PerformancePage();
     await expect(page).toHaveURL(URL_PATTERNS.PERFORMANCE);
 
     // 8. Directory
-    await navegationMenu.DirectoryPage();
+    await navigationMenu.DirectoryPage();
     await expect(page).toHaveURL(URL_PATTERNS.DIRECTORY);
 
     // 9. Maintenance
-    await navegationMenu.MaintenancePage();
+    await navigationMenu.MaintenancePage();
     await expect(page).toHaveURL(URL_PATTERNS.MAINTENANCE);
 
     // 10. Claim
-    await navegationMenu.ClaimPage();
+    await navigationMenu.ClaimPage();
     await expect(page).toHaveURL(URL_PATTERNS.CLAIM);
 
     // 11. Buzz
-    await navegationMenu.BuzzPage();
+    await navigationMenu.BuzzPage();
     await expect(page).toHaveURL(URL_PATTERNS.BUZZ);
   }); 
 });

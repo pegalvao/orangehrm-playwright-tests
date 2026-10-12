@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { PimPage } from '../../pages/PimPage';
-import { NavigationMenu } from '../../pages/NavegationMenu';
+import { NavigationMenu } from '../../pages/NavigationMenu';
 
 test.describe.serial('Módulo PIM - Gestão de Funcionários', () => {
   let pimPage: PimPage;
@@ -13,7 +13,7 @@ test.describe.serial('Módulo PIM - Gestão de Funcionários', () => {
   test.beforeEach(async ({ page }) => {
     pimPage = new PimPage(page);
     navigationMenu = new NavigationMenu(page);
-
+    await navigationMenu.AcessDashboard();
     await navigationMenu.AcessPimPage();
   });
 
