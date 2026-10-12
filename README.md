@@ -1,5 +1,7 @@
+
 ```markdown
-## 🇧🇷 Versão em Português
+
+## Versão em Português
 
 # 🧪 Automação de Testes E2E — OrangeHRM (MVP)
 
@@ -105,7 +107,7 @@ QA Junior focado em construir uma base sólida em automação de testes e engenh
 
 ---
 
-## 🇺🇸 English Version
+## English Version
 
 # 🧪 E2E Test Automation — OrangeHRM (MVP)
 
@@ -206,5 +208,7 @@ npx playwright show-report
 Junior QA focused on building a solid foundation in test automation and quality engineering.
 
 [LinkedIn](https://www.linkedin.com/in/pedro-evaristo-71a727216/) · [GitHub](https://github.com/pegalvao)
+
+```
 
 ```
