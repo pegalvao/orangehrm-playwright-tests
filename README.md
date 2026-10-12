@@ -1,8 +1,4 @@
 ```markdown
-*Read this in: [English](#-english-version) | [Português](#-versão-em-português)*
-
----
-
 ## 🇧🇷 Versão em Português
 
 # 🧪 Automação de Testes E2E — OrangeHRM (MVP)
