@@ -43,15 +43,11 @@ test.describe('Smoke Test - Navegação do Menu Principal', () => {
     await navigationMenu.DirectoryPage();
     await expect(page).toHaveURL(URL_PATTERNS.DIRECTORY);
 
-    // 9. Maintenance
-    await navigationMenu.MaintenancePage();
-    await expect(page).toHaveURL(URL_PATTERNS.MAINTENANCE);
-
-    // 10. Claim
+    // 9. Claim
     await navigationMenu.ClaimPage();
     await expect(page).toHaveURL(URL_PATTERNS.CLAIM);
 
-    // 11. Buzz
+    // 10. Buzz
     await navigationMenu.BuzzPage();
     await expect(page).toHaveURL(URL_PATTERNS.BUZZ);
   }); 

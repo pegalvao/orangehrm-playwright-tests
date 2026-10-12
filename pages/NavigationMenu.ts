@@ -10,7 +10,6 @@ export class NavigationMenu{
     readonly MyInfoMenuButton : Locator
     readonly PerformanceMenuButton: Locator
     readonly DirectoryMenuButton : Locator
-    readonly MaintenanceMenuButton: Locator
     readonly ClaimMenuButton : Locator
     readonly BuzzMenuButton : Locator
     constructor(page: Page) {
@@ -23,7 +22,6 @@ export class NavigationMenu{
         this.MyInfoMenuButton = page.getByRole('link', { name: 'My Info' });
         this.PerformanceMenuButton = page.getByRole('link', {name: 'Performance'});
         this.DirectoryMenuButton = page.getByRole('link', {name: 'Directory'});
-        this.MaintenanceMenuButton = page.getByRole('link', {name: 'Maintenance'});
         this.ClaimMenuButton = page.getByRole('link', {name: 'Claim'});
         this.BuzzMenuButton = page.getByRole('link', {name: 'Buzz'});
     }
@@ -69,11 +67,6 @@ export class NavigationMenu{
     async DirectoryPage(){
         await this.DirectoryMenuButton.click();
         await this.page.waitForURL(URL_PATTERNS.DIRECTORY);
-    }
-
-    async MaintenancePage(){
-        await this.MaintenanceMenuButton.click();
-        await this.page.waitForURL(URL_PATTERNS.MAINTENANCE);
     }
 
     async ClaimPage(){

@@ -8,7 +8,6 @@ export const URL_PATTERNS = {
   PERFORMANCE: '/web/index.php/performance/searchEvaluatePerformanceReview',
   DASHBOARD: '/web/index.php/dashboard/index',
   DIRECTORY: '/web/index.php/directory/viewDirectory',
-  MAINTENANCE: '/web/index.php/maintenance/purgeEmployee',
   CLAIM: '/web/index.php/claim/viewAssignClaim',
   BUZZ: '/web/index.php/buzz/viewBuzz',
 };
