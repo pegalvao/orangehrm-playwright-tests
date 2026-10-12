@@ -1,5 +1,9 @@
+
 ```markdown
+*Read this in: [English](#-english-version) | [Português](#-versão-em-português)*
+
 ---
+
 ## 🇧🇷 Versão em Português
 
 # 🧪 Automação de Testes E2E — OrangeHRM (MVP)
@@ -110,7 +114,7 @@ QA Junior focado em construir uma base sólida em automação de testes e engenh
 
 # 🧪 E2E Test Automation — OrangeHRM (MVP)
 
-Project focused on automating critical workflows (MVP) of the [OrangeHRM](https://www.google.com/search?q=https%3A%2F%2Fopensource-demo.orangehrmlive.com) HR system, developed to consolidate my practical knowledge in Software Quality Assurance (QA).
+Project focused on automating critical workflows (MVP) of the [OrangeHRM](https://opensource-demo.orangehrmlive.com) HR system, developed to consolidate my practical knowledge in Software Quality Assurance (QA).
 
 The main goal here is not test volume, but rather applying **technical quality and a scalable architecture**. I used **Playwright** with **TypeScript** to demonstrate some of the best market practices, including continuous integration.
 
