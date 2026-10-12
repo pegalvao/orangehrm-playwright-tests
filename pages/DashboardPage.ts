@@ -7,7 +7,6 @@ export class DashboardPage{
         this.page = page;
         this.dashboardButton = page.getByRole('link', { name: 'Dashboard' });
     }
-    //Acessar a página de Dashboard
 async AcessDashboard(){
         await this.page.goto('/web/index.php/dashboard/index');
     }

@@ -16,12 +16,10 @@ export class LoginPage {
     this.errorMessage = page.getByText('Invalid credentials');
   }
 
-  // Acessar a página de Login
   async pageLogin() {
     await this.page.goto('/web/index.php/auth/login');
   }
 
-  // Fluxo de Login
   async login(username: string, password: string) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
