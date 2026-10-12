@@ -9,7 +9,6 @@ export class NavigationMenu{
     readonly RecruitmentMenuButton: Locator
     readonly MyInfoMenuButton : Locator
     readonly PerformanceMenuButton: Locator
-    readonly DashboardMenuButton : Locator
     readonly DirectoryMenuButton : Locator
     readonly MaintenanceMenuButton: Locator
     readonly ClaimMenuButton : Locator
@@ -23,13 +22,16 @@ export class NavigationMenu{
         this.RecruitmentMenuButton = page.getByRole('link', { name: 'Recruitment' });
         this.MyInfoMenuButton = page.getByRole('link', { name: 'My Info' });
         this.PerformanceMenuButton = page.getByRole('link', {name: 'Performance'});
-        this.DashboardMenuButton = page.getByRole('link', {name: 'Dashboard'});
         this.DirectoryMenuButton = page.getByRole('link', {name: 'Directory'});
         this.MaintenanceMenuButton = page.getByRole('link', {name: 'Maintenance'});
         this.ClaimMenuButton = page.getByRole('link', {name: 'Claim'});
         this.BuzzMenuButton = page.getByRole('link', {name: 'Buzz'});
     }
-    //Acessar a página de Admin
+   
+    async AcessDashboard() {
+        await this.page.goto('/web/index.php/auth/login');
+    }
+
     async AcessAdminPage(){
         await this.AdminMenuButton.click();
         await this.page.waitForURL(URL_PATTERNS.ADMIN);
@@ -62,11 +64,6 @@ export class NavigationMenu{
     async PerformancePage(){
         await this.PerformanceMenuButton.click();
         await this.page.waitForURL(URL_PATTERNS.PERFORMANCE);
-    }
-
-    async DashboardPage(){
-        await this.DashboardMenuButton.click();
-        await this.page.waitForURL(URL_PATTERNS.DASHBOARD);
     }
 
     async DirectoryPage(){

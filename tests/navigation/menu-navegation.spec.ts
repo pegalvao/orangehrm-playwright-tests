@@ -7,8 +7,7 @@ test.describe('Smoke Test - Navegação do Menu Principal', () => {
   test.beforeEach(async ({ page }) => {
     navegationMenu = new NavigationMenu(page);
     
-    await navegationMenu.DashboardPage();
-
+    await navegationMenu.AcessDashboard();
   });
 
   test('Deve navegar pelas páginas principais usando o menu lateral', async ({ page }) => {
@@ -32,12 +31,28 @@ test.describe('Smoke Test - Navegação do Menu Principal', () => {
     await navegationMenu.RecruitmentPage();
     await expect(page).toHaveURL(URL_PATTERNS.RECRUITMENT);
 
-    // 6. My Info (Usamos uma Regex mais branda para ignorar o "empNumber/7" que pode mudar)
+    // 6. My Info
     await navegationMenu.MyInfoPage();
     await expect(page).toHaveURL(URL_PATTERNS.MY_INFO);
 
-    // 7. Retorna ao Dashboard
-    await navegationMenu.DashboardPage();
-    await expect(page).toHaveURL(URL_PATTERNS.DASHBOARD);
+    // 7. Performance
+    await navegationMenu.PerformancePage();
+    await expect(page).toHaveURL(URL_PATTERNS.PERFORMANCE);
+
+    // 8. Directory
+    await navegationMenu.DirectoryPage();
+    await expect(page).toHaveURL(URL_PATTERNS.DIRECTORY);
+
+    // 9. Maintenance
+    await navegationMenu.MaintenancePage();
+    await expect(page).toHaveURL(URL_PATTERNS.MAINTENANCE);
+
+    // 10. Claim
+    await navegationMenu.ClaimPage();
+    await expect(page).toHaveURL(URL_PATTERNS.CLAIM);
+
+    // 11. Buzz
+    await navegationMenu.BuzzPage();
+    await expect(page).toHaveURL(URL_PATTERNS.BUZZ);
   }); 
 });
